@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher - Dashboard</title>
+    <link th:href="@{/css/output.css}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR (static, no icons) -->
+    <aside class="w-64 bg-indigo-700 text-white flex flex-col">
+        <div class="p-6 text-2xl font-bold border-b border-indigo-500">
+            Edu-AI Teacher
+        </div>
+
+        <nav class="flex-1 p-4 space-y-2">
+            <a th:href="@{/teacher/dashboard}" class="block px-4 py-2 rounded bg-indigo-600">Dashboard</a>
+            <a th:href="@{/teacher/class/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Classes</a>
+            <a th:href="@{/teacher/subject/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Subjects</a>
+            <a th:href="@{/teacher/lesson/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Lessons</a>
+            <a th:href="@{/teacher/exam/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Exams</a>
+            <a th:href="@{/teacher/student/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Students</a>
+        </nav>
+
+        <div class="p-4 border-t border-indigo-500">
+            <a th:href="@{/logout}" class="block text-center bg-red-500 hover:bg-red-600 py-2 rounded">Logout</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 p-6">
+
+        <!-- PAGE HEADER -->
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">Teacher Dashboard</h1>
+            <p class="text-gray-500">Welcome back, <span class="font-semibold" th:text="${teacherName}">Teacher</span></p>
+        </div>
+
+        <!-- STAT CARDS: first row 3 cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="bg-white rounded-xl shadow p-6">
+                <p class="text-gray-500">Classes</p>
+                <p class="text-3xl font-bold text-indigo-600" th:text="${classesCount}">0</p>
+            </div>
+            <div class="bg-white rounded-xl shadow p-6">
+                <p class="text-gray-500">Subjects</p>
+                <p class="text-3xl font-bold text-indigo-600" th:text="${subjectsCount}">0</p>
+            </div>
+            <div class="bg-white rounded-xl shadow p-6">
+                <p class="text-gray-500">Lessons</p>
+                <p class="text-3xl font-bold text-indigo-600" th:text="${lessonsCount}">0</p>
+            </div>
+        </div>
+
+        <!-- STAT CARDS: second row 2 cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow p-6">
+                <p class="text-gray-500">Exams</p>
+                <p class="text-3xl font-bold text-indigo-600" th:text="${examsCount}">0</p>
+            </div>
+            <div class="bg-white rounded-xl shadow p-6">
+                <p class="text-gray-500">Students</p>
+                <p class="text-3xl font-bold text-indigo-600" th:text="${studentsCount}">0</p>
+            </div>
+        </div>
+
+        <!-- example content area -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h2 class="text-xl font-semibold mb-4">Recent activity</h2>
+            <p class="text-gray-600">No recent activity.</p>
+        </div>
+
+    </main>
+</div>
+</body>
+</html>

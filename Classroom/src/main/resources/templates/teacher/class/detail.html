@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Detail</title>
+    <link th:href="@{/css/output.css}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+<div class="flex min-h-screen">
+    <aside class="w-64 bg-indigo-700 text-white flex flex-col">
+        <div class="p-6 text-2xl font-bold border-b border-indigo-500">Edu-AI Teacher</div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a th:href="@{/teacher/dashboard}" class="block px-4 py-2 rounded hover:bg-indigo-600">Dashboard</a>
+            <a th:href="@{/teacher/class/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Classes</a>
+        </nav>
+        <div class="p-4 border-t border-indigo-500"><a th:href="@{/logout}" class="block text-center bg-red-500 hover:bg-red-600 py-2 rounded">Logout</a></div>
+    </aside>
+    <main class="flex-1 p-6">
+        <div class="mb-6"><h1 class="text-3xl font-bold text-gray-800">Class Detail</h1><p class="text-gray-500">Details for class.</p></div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <p><strong>Name:</strong> <span th:text="${class['name']}">Class A</span></p>
+            <p><strong>Size:</strong> <span th:text="${class['size']}">20</span></p>
+            <a th:href="@{/teacher/class/list}" class="text-indigo-600">Back</a>
+        </div>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Subjects - List</title>
+    <link href="/css/output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+<div class="flex min-h-screen">
+    <aside class="w-64 bg-indigo-700 text-white flex flex-col">
+        <div class="p-6 text-2xl font-bold border-b border-indigo-500">Edu-AI Teacher</div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a href="/teacher/dashboard" class="block px-4 py-2 rounded hover:bg-indigo-600">Dashboard</a>
+            <a href="/teacher/class/list" class="block px-4 py-2 rounded hover:bg-indigo-600">Classes</a>
+            <a href="/teacher/subject/list" class="block px-4 py-2 rounded hover:bg-indigo-600">Subjects</a>
+            <a href="/teacher/lesson/list" class="block px-4 py-2 rounded hover:bg-indigo-600">Lessons</a>
+            <a href="/teacher/exam/list" class="block px-4 py-2 rounded hover:bg-indigo-600">Exams</a>
+            <a href="/teacher/student/list" class="block px-4 py-2 rounded hover:bg-indigo-600">Students</a>
+        </nav>
+        <div class="p-4 border-t border-indigo-500"><a href="/logout" class="block text-center bg-red-500 hover:bg-red-600 py-2 rounded">Logout</a></div>
+    </aside>
+    <main class="flex-1 p-6">
+        <div class="mb-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-800">Subjects</h1>
+                <p class="text-gray-500">Manage subjects.</p>
+            </div>
+            <a href="/teacher/subject/form" class="bg-indigo-600 text-white px-4 py-2 rounded">Create subject</a>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <table class="w-full text-left">
+                <thead><tr><th>Name</th><th>Actions</th></tr></thead>
+                <tbody>
+                <tr>
+                    <td>Mathematics</td>
+                    <td><a href="/teacher/subject/detail/2" class="text-indigo-600">View</a> | <a href="/teacher/subject/form?id=2" class="text-indigo-600">Edit</a> | <a href="#" class="text-red-600">Delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+</body>
+</html>

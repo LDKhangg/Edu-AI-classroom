@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes - List</title>
+    <link th:href="@{/css/output.css}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+<div class="flex min-h-screen">
+    <!-- Inline sidebar with Classes highlighted -->
+    <aside class="w-64 bg-indigo-700 text-white flex flex-col">
+        <div class="p-6 text-2xl font-bold border-b border-indigo-500">Edu-AI Teacher</div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a th:href="@{/teacher/dashboard}" class="block px-4 py-2 rounded hover:bg-indigo-600">Dashboard</a>
+            <a th:href="@{/teacher/class/list}" class="block px-4 py-2 rounded bg-indigo-600">Classes</a>
+            <a th:href="@{/teacher/subject/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Subjects</a>
+            <a th:href="@{/teacher/lesson/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Lessons</a>
+            <a th:href="@{/teacher/exam/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Exams</a>
+            <a th:href="@{/teacher/student/list}" class="block px-4 py-2 rounded hover:bg-indigo-600">Students</a>
+        </nav>
+        <div class="p-4 border-t border-indigo-500"><a th:href="@{/logout}" class="block text-center bg-red-500 hover:bg-red-600 py-2 rounded">Logout</a></div>
+    </aside>
+
+    <main class="flex-1 p-6">
+        <div class="mb-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-800">Classes</h1>
+                <p class="text-gray-500">Manage your classes.</p>
+            </div>
+            <a th:href="@{/teacher/class/form}" class="bg-indigo-600 text-white px-4 py-2 rounded">Create class</a>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+            <table class="w-full text-left">
+                <thead><tr><th>Name</th><th>Students</th><th>Actions</th></tr></thead>
+                <tbody>
+                <tr th:each="c : ${classes}">
+                    <td th:text="${c['name']}">Class A</td>
+                    <td th:text="${c['size']}">20</td>
+                    <td><a th:href="@{|/teacher/class/detail/${c['id']}|}" class="text-indigo-600">View</a> | <a th:href="@{|/teacher/class/form?id=${c['id']}|}" class="text-indigo-600">Edit</a> | <a href="#" class="text-red-600">Delete</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+</body>
+</html>
