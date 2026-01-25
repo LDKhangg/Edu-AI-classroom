@@ -1,0 +1,174 @@
+<div th:fragment="dashboard-content">
+
+    <div class="mb-10">
+        <h3 class="text-3xl font-bold text-slate-800">Chào mừng quay trở lại, <span class="ai-text-gradient">Học sinh A!</span> 👋</h3>
+        <p class="text-slate-500 mt-2 font-medium">Hôm nay là một ngày tuyệt vời để học thêm kiến thức mới.</p>
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex items-center gap-6 stat-card-glow transition-all duration-300">
+            <div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 shadow-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+            </div>
+            <div>
+                <p class="text-sm text-slate-400 font-bold uppercase tracking-wider">Hành trình</p>
+                <p class="text-3xl font-extrabold text-slate-800">12 <span class="text-lg font-medium text-slate-400">Bài học</span></p>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 flex items-center gap-6 stat-card-glow transition-all duration-300">
+            <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 shadow-inner">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <div>
+                <p class="text-sm text-slate-400 font-bold uppercase tracking-wider">Tiến độ</p>
+                <p class="text-3xl font-extrabold text-slate-800">85<span class="text-lg font-medium text-slate-400">%</span></p>
+            </div>
+        </div>
+
+        <div class="ai-gradient p-[2px] rounded-[2rem] shadow-lg shadow-indigo-100 stat-card-glow transition-all duration-300 group">
+            <div class="bg-white h-full w-full rounded-[1.9rem] p-8 flex items-center gap-6">
+                <div class="w-16 h-16 ai-gradient rounded-2xl flex items-center justify-center text-white shadow-lg animate-pulse-soft">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-sm ai-text-gradient font-black uppercase tracking-widest">AI Gợi ý</p>
+                    <p class="text-xl font-bold text-slate-800">Ôn tập Phép nhân</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Main Lessons List -->
+        <div class="lg:col-span-2 space-y-8">
+            <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-slate-800">Bài học dành cho bạn</h3>
+                <a href="#" class="text-indigo-600 font-bold hover:text-indigo-700 transition-colors flex items-center gap-1 group">
+                    Xem tất cả 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Lesson Card -->
+            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-indigo-200 transition-all duration-500 group relative overflow-hidden">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-56 h-40 bg-slate-100 rounded-3xl overflow-hidden relative shadow-inner">
+                        <img src="https://img.freepik.com/free-vector/maths-elements-background_23-2148160756.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-indigo-900/20 group-hover:bg-indigo-900/0 transition-colors"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-indigo-600 shadow-xl group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="px-4 py-1.5 bg-indigo-50 text-indigo-600 text-xs font-black rounded-full uppercase tracking-widest border border-indigo-100">Toán học</span>
+                            <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">45 phút</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-indigo-600 transition-colors">Số học: Phép toán lớp 5</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 font-medium">Bí mật của những con số và cách tính nhanh nhạy nhất.</p>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="flex-1 bg-slate-100 h-3 rounded-full overflow-hidden">
+                                <div class="ai-gradient h-full w-2/3 rounded-full shadow-lg shadow-indigo-200"></div>
+                            </div>
+                            <span class="text-xs font-black text-indigo-600 uppercase tracking-widest whitespace-nowrap">65% Đã học</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson Card 2 -->
+            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-slate-100 hover:border-orange-200 transition-all duration-500 group relative overflow-hidden">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-56 h-40 bg-slate-100 rounded-3xl overflow-hidden relative shadow-inner">
+                        <img src="https://img.freepik.com/free-vector/alphabet-vibrant-gradient-background_52683-10706.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div class="absolute inset-0 bg-orange-900/10 group-hover:bg-orange-900/0 transition-colors"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-orange-500 shadow-xl group-hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="px-4 py-1.5 bg-orange-50 text-orange-600 text-xs font-black rounded-full uppercase tracking-widest border border-orange-100">Tiếng Việt</span>
+                            <span class="text-xs text-slate-400 font-bold uppercase tracking-widest">30 phút</span>
+                        </div>
+                        <h4 class="text-2xl font-bold text-slate-800 mb-2 group-hover:text-orange-600 transition-colors">Luyện từ: Thế giới ngôn từ</h4>
+                        <p class="text-slate-500 text-sm leading-relaxed mb-6 font-medium">Khám phá vẻ đẹp của tiếng mẹ đẻ qua những bài học thú vị.</p>
+                        
+                        <div class="flex items-center gap-4">
+                            <div class="flex-1 bg-slate-100 h-3 rounded-full overflow-hidden">
+                                <div class="bg-orange-400 h-full w-0"></div>
+                            </div>
+                            <span class="text-xs font-black text-slate-400 uppercase tracking-widest whitespace-nowrap">Chưa bắt đầu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar / AI Insights -->
+        <div class="space-y-10">
+            <div class="ai-gradient p-10 rounded-[3rem] text-white relative overflow-hidden shadow-2xl shadow-indigo-200">
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-black mb-4 tracking-tight">Thử thách AI 🔥</h3>
+                    <p class="text-indigo-100 text-sm mb-8 font-medium leading-relaxed italic line-clamp-3">AI nhận thấy phần Phép nhân bạn đang gặp khó khăn. Muốn AI trợ giúp giải thích theo cách siêu dễ hiểu không?</p>
+                    <button class="bg-white text-indigo-600 px-8 py-4 rounded-2xl font-black text-sm hover:bg-slate-50 transition-all active:scale-95 shadow-xl">Hỏi AI Trợ Giúp</button>
+                </div>
+                <!-- Decorative Circles -->
+                <div class="absolute -right-16 -bottom-16 w-56 h-56 bg-white/10 rounded-full"></div>
+                <div class="absolute -right-4 -top-4 w-24 h-24 bg-indigo-400 rounded-full opacity-30"></div>
+            </div>
+
+            <div class="bg-white p-10 rounded-[3rem] shadow-sm border border-slate-100">
+                <h3 class="text-xl font-bold text-slate-800 mb-8 flex items-center gap-3">
+                    <span class="w-1.5 h-6 ai-gradient rounded-full"></span>
+                    Sắp tới
+                </h3>
+                <div class="space-y-8">
+                    <div class="flex gap-6 items-center group cursor-pointer border-l-2 border-transparent hover:border-red-500 pl-4 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-red-50 text-red-600 flex flex-col items-center justify-center font-bold text-xs shadow-sm">
+                            <span class="text-[10px] uppercase font-black opacity-50">Th1</span>
+                            <span class="text-lg leading-none">25</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h5 class="text-base font-bold text-slate-800 truncate group-hover:text-red-600 transition-colors">Ôn tập cuối tuần</h5>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Toán học • 20 câu</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-center group cursor-pointer border-l-2 border-transparent hover:border-indigo-500 pl-4 transition-all">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex flex-col items-center justify-center font-bold text-xs shadow-sm">
+                            <span class="text-[10px] uppercase font-black opacity-50">Th1</span>
+                            <span class="text-lg leading-none">27</span>
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <h5 class="text-base font-bold text-slate-800 truncate group-hover:text-indigo-600 transition-colors">Tập làm văn mẫu</h5>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-tighter">Tiếng Việt • Thực hành</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full mt-10 py-5 border-2 border-dashed border-slate-200 rounded-[2rem] text-slate-400 text-xs font-black uppercase tracking-widest hover:border-indigo-300 hover:text-indigo-600 transition-all active:scale-95">
+                    Mở toàn bộ lịch
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>

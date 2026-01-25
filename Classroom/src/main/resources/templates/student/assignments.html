@@ -1,0 +1,134 @@
+<div th:fragment="assignments-content">
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <!-- Sidebar: Homework List -->
+        <div class="lg:col-span-1 space-y-6">
+            <h3 class="text-xl font-extrabold text-slate-800 mb-6 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                Bài tập
+            </h3>
+            
+            <!-- Homework Item Active -->
+            <div class="p-6 ai-gradient rounded-[2.5rem] text-white shadow-xl shadow-indigo-200 space-y-4 cursor-pointer transform hover:scale-[1.02] transition-all">
+                <span class="px-3 py-1 bg-white/20 backdrop-blur text-[10px] font-black rounded-full uppercase tracking-widest">Đang làm</span>
+                <h4 class="font-bold text-lg leading-tight">Toán: Phép nhân 2 chữ số</h4>
+                <p class="text-xs text-indigo-100 font-medium">Hạn chót: Hôm nay</p>
+                <div class="space-y-2 pt-2">
+                    <div class="flex items-center justify-between text-[10px] font-black uppercase tracking-widest">
+                        <span>Tiến độ</span>
+                        <span>5/15</span>
+                    </div>
+                    <div class="h-2 bg-white/20 rounded-full overflow-hidden">
+                        <div class="bg-white h-full w-1/3 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework Item -->
+            <div class="p-6 bg-white border border-slate-100 rounded-[2.5rem] text-slate-800 hover:border-indigo-200 shadow-sm transition-all cursor-pointer group">
+                <span class="px-3 py-1 bg-slate-50 text-slate-400 text-[10px] font-black rounded-full uppercase tracking-widest">Chờ</span>
+                <h4 class="font-bold text-base mt-4 group-hover:text-indigo-600 transition-colors">Tiếng Việt: Từ vựng</h4>
+                <p class="text-xs text-slate-400 mt-1 font-medium italic">Hạn chót: 2 ngày nữa</p>
+            </div>
+            
+            <div class="p-6 bg-white border border-slate-100 rounded-[2.5rem] opacity-60 grayscale-[0.5]">
+                <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-full uppercase tracking-widest">Hoàn thành</span>
+                <h4 class="font-bold text-base mt-4">Khoa học: Sinh học</h4>
+                <p class="text-xs text-emerald-600 font-black mt-1">GPA: 10/10 ✨</p>
+            </div>
+        </div>
+
+        <!-- Main: Question Area -->
+        <div class="lg:col-span-2 space-y-8">
+            <div class="bg-white p-12 rounded-[3.5rem] shadow-sm border border-slate-100 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8">
+                    <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100">
+                        <span class="text-indigo-600 font-black text-sm tracking-tighter">6<span class="text-slate-300 mx-0.5">/</span>15</span>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <span class="text-slate-400 font-black uppercase tracking-[0.2em] text-[10px] block mb-4">Câu hỏi số 06</span>
+                    <h2 class="text-3xl font-bold text-slate-800 leading-tight">Một cửa hàng có <span class="text-indigo-600 underline decoration-indigo-200 underline-offset-8">24 hộp bánh</span>, mỗi hộp có <span class="text-indigo-600 underline decoration-indigo-200 underline-offset-8">12 cái bánh</span>. Hỏi cửa hàng đó có tất cả bao nhiêu cái bánh?</h2>
+                </div>
+                
+                <div class="space-y-4 mb-12">
+                    <label class="flex items-center gap-6 p-6 border-2 border-slate-50 rounded-[2rem] cursor-pointer hover:bg-slate-50 transition-all group active:scale-[0.98]">
+                        <input type="radio" name="answer" class="w-6 h-6 text-indigo-600 focus:ring-indigo-500 border-slate-300" />
+                        <span class="text-xl font-semibold text-slate-600 group-hover:text-slate-900 transition-colors underline-offset-4 decoration-transparent group-hover:decoration-indigo-100">240 cái bánh</span>
+                    </label>
+                    <label class="flex items-center gap-6 p-6 border-2 border-indigo-600 bg-indigo-50/50 rounded-[2rem] cursor-pointer transition-all shadow-lg shadow-indigo-50 ring-2 ring-indigo-100 active:scale-[0.98]">
+                        <input type="radio" name="answer" class="w-6 h-6 text-indigo-600" checked />
+                        <span class="text-xl font-black text-indigo-700">288 cái bánh</span>
+                    </label>
+                    <label class="flex items-center gap-6 p-6 border-2 border-slate-50 rounded-[2rem] cursor-pointer hover:bg-slate-50 transition-all group active:scale-[0.98]">
+                        <input type="radio" name="answer" class="w-6 h-6 text-indigo-600" />
+                        <span class="text-xl font-semibold text-slate-600 group-hover:text-slate-900 transition-colors underline-offset-4 decoration-transparent group-hover:decoration-indigo-100">300 cái bánh</span>
+                    </label>
+                </div>
+
+                <div class="flex justify-between items-center pt-8 border-t border-slate-50">
+                    <button class="text-slate-400 font-black uppercase tracking-widest text-[10px] hover:text-slate-600 transition-all">Bỏ qua</button>
+                    <div class="flex gap-4">
+                        <button class="w-14 h-14 rounded-2xl border border-slate-200 flex items-center justify-center text-slate-400 hover:bg-slate-50 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                        </button>
+                        <button class="bg-slate-900 text-white px-12 py-4 rounded-2xl font-black shadow-xl hover:bg-black transition-all active:scale-95">Tiếp theo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Panel -->
+        <div class="lg:col-span-1">
+            <div class="bg-white rounded-[3rem] shadow-2xl shadow-indigo-100 border border-slate-100 overflow-hidden flex flex-col h-[650px] sticky top-32">
+                <div class="p-8 ai-gradient text-white flex items-center justify-between shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center shadow-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9l1.103-1.103A3 3 0 0112 11a3 3 0 012.828 4.243l1.103 1.103M7.5 14.25a3 3 0 00-3 3h15a3 3 0 00-3-3m-9-1.5c.343 0 .677.067 1 .184" /></svg>
+                        </div>
+                        <div>
+                            <span class="font-black tracking-tight text-lg">Gia sư AI</span>
+                            <div class="flex items-center gap-1.5 mt-0.5">
+                                <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-indigo-100">Đang trực tuyến</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-8 flex-1 space-y-6 overflow-y-auto scrollbar-hide bg-slate-50/30">
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 rounded-2xl ai-gradient flex items-center justify-center text-white shadow-md flex-shrink-0 text-lg">🤖</div>
+                        <div class="p-5 bg-white rounded-[2rem] rounded-tl-none text-sm text-slate-600 leading-relaxed shadow-sm border border-slate-50">
+                            Chào bạn! Để giải bài này, bạn hãy lấy <span class="font-bold text-indigo-600 italic">24 nhân với 12</span>. <br/><br/>
+                            💡 <span class="font-bold">Mẹo nhỏ:</span> <br/>
+                            Lấy 24 x 10 = <span class="bg-indigo-50 px-1 rounded">240</span>, sau đó lấy 24 x 2 = <span class="bg-indigo-50 px-1 rounded">48</span>. Cuối cùng cộng chúng lại nhé!
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-row-reverse gap-4">
+                        <div class="w-10 h-10 rounded-2xl bg-indigo-100 flex items-center justify-center text-indigo-600 flex-shrink-0 text-[10px] font-black shadow-sm">HS</div>
+                        <div class="p-5 ai-gradient text-white rounded-[2rem] rounded-tr-none text-sm leading-relaxed shadow-lg font-medium">
+                            Cảm ơn AI, mẹo nhân nhẩm hay quá!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-white border-t border-slate-50">
+                    <div class="relative group">
+                        <input type="text" placeholder="Hỏi AI bí kíp giải bài..." class="w-full bg-slate-50 border-none rounded-2xl py-5 pl-6 pr-14 text-sm font-medium focus:ring-2 focus:ring-indigo-500 transition-all placeholder:text-slate-400" />
+                        <button class="absolute right-3 top-2.5 p-3 ai-gradient text-white rounded-xl shadow-lg shadow-indigo-100 transition-all active:scale-90 group-focus-within:rotate-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-45" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
